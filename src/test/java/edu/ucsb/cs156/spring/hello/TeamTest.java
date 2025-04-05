@@ -36,6 +36,14 @@ public class TeamTest {
         assert(!team2.equals(team3));
     }
     @Test
+    public void sameNameTest() {
+        Team team2 = new Team("test-team");
+        Team team3 = new Team("test-team");
+        team2.addMember("Timothy");
+        team3.addMember("Timothy1");
+        assert(!team2.equals(team3));
+    }
+    @Test
     public void notTeamType() {
         String notTeam = "not a team";
         assert(!team.equals(notTeam));
